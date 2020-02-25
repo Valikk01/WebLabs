@@ -1,4 +1,5 @@
-
+'use strict'
+skjhdfkjashbdfkjaashjg
 class User {
   constructor(name, age) {
     this.name = name;
