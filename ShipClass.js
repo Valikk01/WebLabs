@@ -27,6 +27,10 @@ function foundShip (name){
   	return element.name == name;
 	});
 	return found;
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> ca899423a3d087c23e1b7871090255cef6f3573d
