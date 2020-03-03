@@ -1,23 +1,16 @@
 'use strict'
-const myModule = require('./functions');
-const readline = require('readline');
 
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
+const Task1 = require('./Task1');
+const Task2 = require('./Task2');
+const Task3 = require('./Task3');
+const Task4 = require('./Task4');
+const Task5 = require('./Task5');
 
 console.log('Hello Node')
-console.log('input')
 
-myModule.days("01/01/2021");
-
-console.log(myModule.stringToArr("asjkdh asl alksd"))
-console.log(myModule.SortCharacters("dcba"))
-
-var arr = [2, 11, 37, 42];
-arr = myModule.shuffle(arr);
-console.log(arr);
+console.log(Task1.stringToArr("asjkdh asl alksd"))
+console.log(Task2.SortCharacters("dcba"))
+console.log(Task3.gcd(6,12))
+console.log(Task4.shuffle([1,2,3,6,7]))
+console.log(Task5.days(1,2018))
 
