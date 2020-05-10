@@ -1,0 +1,30 @@
+extends ../layout.pug
+
+block prepend styles
+    link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+    div(class='breadcrumb' style = "width = 100%")
+        li Звіт кораблів в портах та пристанях
+         each val in ports
+            div= 'Порт: ' + val.name + '. Код: ' + val.code + '. Країна: ' + val.country
+            
+             each next in piers
+                if next.port.code === val.code
+                    div(style = "padding-left: 50px")= 'Пристань № ' + next.number  + '. Максимальна місткість: ' + next.capacity
+                
+                    each val in next.ships
+                         div(style = "padding-left: 100px")= 'Корабель: ' + val.name + '. Номер: ' + val.number + '. Країна: ' + val.country + '. Тоннажність: ' + val.weigh
+             
+                        
+
+    
+
+
+
+
+
+block append scripts
+    script(src='/static/js/models/shop.js')
+    script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+    script(src='/static/js/views/shop.js')
