@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    h3 Вантаж
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Місткість
+            input(type="number" class="form-control" id="inputCode")
+        div(class="form-group")
+            label Осадка
+            input(type="text" class="form-control" id="inputName")
+        div(class="form-group")
+            label Номер
+            input(type="number" class="form-control" id="inputMass")
+        button(type="submit" class="btn btn-primary" id="createCargoButton") Додати
+    form(class="form-inline")
+        div(class="form-group")
+            label Знайти за id
+            input(type="number" class="form-control 1" id="inputWhatToFind")
+        button(type="submit" class="btn btn-primary" id="findUserButton") Знайти
+    table(id="piersList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Місткість
+            th Осадка
+            th Номер
+            th Видалити
+            th Редагувати
+        tbody
+
+block append scripts
+    script(src='/public/js/piers.js')

@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    h3 Вантаж на планетах
+    form(class="form-inline")
+        div(class="form-group")
+            label ID
+            input(type="number" class="form-control" id="inputId")
+        div(class="form-group")
+            label Порт
+            input(type="text" class="form-control" id="inputPlanet")
+        div(class="form-group")
+            label Корабель
+            input(type="number" class="form-control" id="inputCargo")
+        button(type="submit" class="btn btn-primary" id="createCargoOnPlanetButton") Додати
+    table(id="cargoOnPlanetsList" class="table table-bordered table-hover")
+        thead
+            th ID
+            th Порт
+            th Корабель
+            th Відбуття
+        tbody
+    button(type="submit" class="btn btn-primary" id="ShowLessThen30") Показати
+    table(id="cargoOnPlanetsListLessThen30" class="table table-bordered table-hover")
+        thead
+            th(id="PlanetId") ID
+            th(id="PlanetName") Назва
+            th(id="PlanetMass") Маса
+            th(id="PlanetCapacity") Місткість
+        tbody
+
+
+block append scripts
+    script(src='/public/js/shipToPier.js')
+    script(src='/public/js/cargoOnPlanetsLessThen30.js')
